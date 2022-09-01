@@ -7,9 +7,19 @@ router.get("/", (req, res) => {
   res.send(layout("hello"));
 });
 
-// route.post("/", (req, res, next) => {
+// route.post("/", async (req, res, next) => {
+//   try{
+//     const page = await Page.create({
+//       title: req.body.title,
+//       content: req.body.content
+//     })
 //   //req.body
-//   res.json(req.body);
+//   //res.json(req.body);
+//   await Page.save()
+//   res.redirect('/');
+//   } catch(error){
+//     next(error)
+//   }
 // });
 
 router.get("/add", (req, res) => {
